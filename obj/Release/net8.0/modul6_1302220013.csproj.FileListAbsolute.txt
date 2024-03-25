@@ -1,0 +1,15 @@
+D:\modul6_1302220013\bin\Release\net8.0\modul6_1302220013.exe
+D:\modul6_1302220013\bin\Release\net8.0\modul6_1302220013.deps.json
+D:\modul6_1302220013\bin\Release\net8.0\modul6_1302220013.runtimeconfig.json
+D:\modul6_1302220013\bin\Release\net8.0\modul6_1302220013.dll
+D:\modul6_1302220013\bin\Release\net8.0\modul6_1302220013.pdb
+D:\modul6_1302220013\obj\Release\net8.0\modul6_1302220013.GeneratedMSBuildEditorConfig.editorconfig
+D:\modul6_1302220013\obj\Release\net8.0\modul6_1302220013.AssemblyInfoInputs.cache
+D:\modul6_1302220013\obj\Release\net8.0\modul6_1302220013.AssemblyInfo.cs
+D:\modul6_1302220013\obj\Release\net8.0\modul6_1302220013.csproj.CoreCompileInputs.cache
+D:\modul6_1302220013\obj\Release\net8.0\modul6_1302220013.sourcelink.json
+D:\modul6_1302220013\obj\Release\net8.0\modul6_1302220013.dll
+D:\modul6_1302220013\obj\Release\net8.0\refint\modul6_1302220013.dll
+D:\modul6_1302220013\obj\Release\net8.0\modul6_1302220013.pdb
+D:\modul6_1302220013\obj\Release\net8.0\modul6_1302220013.genruntimeconfig.cache
+D:\modul6_1302220013\obj\Release\net8.0\ref\modul6_1302220013.dll

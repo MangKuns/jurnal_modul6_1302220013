@@ -1,5 +1,6 @@
 ﻿using modul6_1302220013;
 using System.ComponentModel;
+using System.Diagnostics;
 
 namespace modul6_1302220013
 {
@@ -11,6 +12,7 @@ namespace modul6_1302220013
 
         public SayaTubeUser(string username)
         {
+            Debug.Assert(username != null && username.Length <= 100, "Username tidak boleh lebih dari 100 karakter");
             this.Username = username;
             this.Id = generateID();
             this.uploadedVideos = new List<SayaTubeVideo>();
@@ -34,6 +36,7 @@ namespace modul6_1302220013
 
         public void addVideo(SayaTubeVideo video)
         {
+            Debug.Assert(video.GetPlayCount() <= int.MaxValue, "playcount nya tidak boleh lebih dari max value integer");
             uploadedVideos.Add(video);
         }
 
@@ -56,6 +59,7 @@ namespace modul6_1302220013
 
         public SayaTubeVideo(string title)
         {
+            Debug.Assert(title.Length <= 200 && title != null, "title tidak boleh lebih dari 200 karakter");
             this.title = title;
             this.playCount = 0;
             this.Id = generateID();
@@ -69,7 +73,21 @@ namespace modul6_1302220013
 
         public void increasePlayCount(int playCount)
         {
-            this.playCount =+ playCount;
+            Debug.Assert(playCount <= 25000000 && playCount >= 0 && this.playCount + playCount <= int.MaxValue, "Maksium playcount 25.000.000 dan ketika playcount ditambah tidak melebihi batas max value integer");
+
+            try
+            {
+                checked 
+                {
+                    this.playCount += playCount;
+                }
+            }
+            catch (OverflowException e)
+            {
+                Console.WriteLine("Kocak woi");
+            }
+
+            
         }
 
         public void PrintVideoDetails()
@@ -105,6 +123,7 @@ public class Program
         SayaTubeVideo v9 = new SayaTubeVideo("Review Film Parasite oleh Rizky Kusuma Nugraha");
         SayaTubeVideo v10 = new SayaTubeVideo("Review Film  Gone Girl oleh Rizky Kusuma Nugraha");
 
+       
         v1.increasePlayCount(1);
         v2.increasePlayCount(1);
         v3.increasePlayCount(1);
